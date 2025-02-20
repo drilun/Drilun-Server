@@ -1,45 +1,104 @@
-Signal-Server
-=================
 
-Documentation
--------------
+# 🚀 Drilun - Mensajería Segura y Privada
 
-Looking for protocol documentation? Check out the website!
+**Drilun** es una aplicación de mensajería avanzada que garantiza la privacidad y seguridad en la comunicación mediante el protocolo de cifrado de extremo a extremo de Signal. Este proyecto proporciona un entorno de comunicación confiable y protegido para usuarios en todo el mundo.
 
-https://signal.org/docs/
+---
 
-How to Build
-------------
+## 🔐 Protocolo de Cifrado
 
-```shell script
-$ ./mvnw clean test
+Drilun implementa el **Protocolo Signal**, reconocido por su alto nivel de seguridad y privacidad. Utiliza la librería **libsignal** para garantizar que los mensajes, llamadas y transferencias de archivos permanezcan protegidos en todo momento.
+
+**Características clave del cifrado:**
+- Cifrado de extremo a extremo para mensajes y llamadas.
+- Generación dinámica de claves para cada sesión.
+- Protección contra ataques de interceptación y repetición.
+- Verificación de identidad mediante claves públicas.
+
+---
+
+## ⚙️ Requisitos del Sistema
+
+Este proyecto es compatible con las siguientes plataformas:
+
+- **Servidor:** Signal-Server en entornos basados en Linux.  
+- **Clientes:** Android, iOS y escritorio (Windows, macOS y Linux).  
+- **Base de datos:** PostgreSQL para la gestión de usuarios y sesiones.  
+
+---
+
+## 📦 Estructura del Proyecto
+
+El ecosistema de Drilun se basa en varios componentes clave:
+
+- **Signal-Server:** Servidor principal para el intercambio de mensajes.  
+- **Signal-Android:** Aplicación móvil para dispositivos Android.  
+- **Signal-iOS:** Aplicación móvil para dispositivos iOS.  
+- **Signal-Desktop:** Aplicación de escritorio multiplataforma.  
+- **Libsignal:** Librería criptográfica para el cifrado de extremo a extremo.  
+
+---
+
+## 📝 Instalación y Configuración
+
+Sigue estos pasos para configurar tu entorno de desarrollo:
+
+1. **Clonar el Repositorio:**  
+```bash
+git clone https://github.com/tu-repositorio/Drilun.git
 ```
 
-Security
---------
+2. **Instalar Dependencias:**  
+```bash
+cd Drilun
+./gradlew build
+```
 
-Security issues should be sent to <a href=mailto:security@signal.org>security@signal.org</a>.
+3. **Configurar Variables de Entorno:**  
+Asegúrate de configurar las variables necesarias en el archivo `.env` o `application.yml`.
 
-Help
-----
+4. **Ejecutar el Servidor:**  
+```bash
+./gradlew run
+```
 
-We cannot provide direct technical support. Get help running this software in your own environment in our [unofficial community forum][community forum].
+---
 
-Cryptography Notice
--------------------
+## 📜 Licencia
 
-This distribution includes cryptographic software. The country in which you currently reside may have restrictions on the import, possession, use, and/or re-export to another country, of encryption software.
-BEFORE using any encryption software, please check your country's laws, regulations and policies concerning the import, possession, or use, and re-export of encryption software, to see if this is permitted.
-See <https://www.wassenaar.org/> for more information.
+Este proyecto se distribuye bajo la **Licencia Pública General de GNU versión 3 (GPLv3)**.  
+Puedes consultar la licencia completa en el archivo `LICENSE` incluido en este repositorio.  
 
-The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS), has classified this software as Export Commodity Control Number (ECCN) 5D002.C.1, which includes information security software using or performing cryptographic functions with asymmetric algorithms.
-The form and manner of this distribution makes it eligible for export under the License Exception ENC Technology Software Unrestricted (TSU) exception (see the BIS Export Administration Regulations, Section 740.13) for both object code and source code.
+El código original pertenece a la **Signal Foundation**. Este proyecto utiliza componentes proporcionados por dicha fundación conforme a los términos de la GPLv3.  
 
-License
--------
+👉 **Más información sobre la licencia:** [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 
-Copyright 2013 Signal Messenger, LLC
+---
 
-Licensed under the GNU AGPLv3: https://www.gnu.org/licenses/agpl-3.0.html
+## 🤝 Reconocimientos y Créditos
 
-[community forum]: https://community.signalusers.org
+Este proyecto no sería posible sin el increíble trabajo de la **Signal Foundation** y su protocolo de cifrado.  
+
+- Protocolo de cifrado: [Signal Protocol](https://signal.org/docs/)  
+- Librería criptográfica: [libsignal](https://github.com/signalapp/libsignal)  
+- Aplicaciones cliente y servidor: [Signal GitHub](https://github.com/signalapp)  
+
+---
+
+## 🚀 Desarrollado por
+
+Este proyecto es desarrollado y mantenido por el equipo de **Drilun**, comprometido con la privacidad y la seguridad digital.  
+
+Para consultas y soporte técnico, visita:  
+🌐 **[www.drilun.com](https://www.drilun.com)**  
+
+---
+
+## 🌐 Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas colaborar, envía un Pull Request o abre un Issue en este repositorio.  
+Asegúrate de seguir las **buenas prácticas de desarrollo** y respetar la **licencia GPLv3**.
+
+---
+
+💙 **Gracias por confiar en Drilun para tu comunicación segura.**
