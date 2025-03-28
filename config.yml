@@ -12,7 +12,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/signal
     username: signaluser
-    password: YourSecurePassword
+    password: 6290984l
     driverClassName: org.postgresql.Driver
 
 logging:
