@@ -1,0 +1,45 @@
+server:
+  applicationConnectors:
+    - type: https
+      port: 8443
+      bindHost: 0.0.0.0
+  adminConnectors:
+    - type: http
+      port: 8444
+      bindHost: 0.0.0.0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/signal
+    username: signaluser
+    password: YourSecurePassword
+    driverClassName: org.postgresql.Driver
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+
+metrics:
+  reporters:
+    - type: signal-datadog
+      frequency: 10 seconds
+      tags:
+        - "env:development"
+        - "service:chat"
+      udpTransport:
+        statsdHost: localhost
+        port: 8125
+
+pushSchedulerCluster:
+  configurationUri: redis://localhost:6379/
+
+rateLimitersCluster:
+  configurationUri: redis://localhost:6379/
+
+twilio:
+  accountId: ""
+  authToken: ""

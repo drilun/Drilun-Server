@@ -1,0 +1,15 @@
+server:
+  address: 0.0.0.0
+  port: 8443
+  domain: "api.drilun.com"
+  ssl:
+    enabled: true
+    key-store: /etc/letsencrypt/live/api.drilun.com/keystore.p12
+    key-store-password: 6290984l
+    key-store-type: PKCS12
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/signal
+    username: signaluser
+    password: 6290984l
