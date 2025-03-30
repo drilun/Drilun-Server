@@ -13,3 +13,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/signal
     username: signaluser
     password: 6290984l
+
+turn:
+  secret: "drilun_turn_secret_key"
+  uris:
+    - "turn:turn.drilun.com:3478"
